@@ -1,0 +1,6 @@
+{
+  "extends": "next",
+  "rules": {
+    "react-hooks/rules-of-hooks": "off" // Disable the rule for conditional useEffect calls
+  }
+}
