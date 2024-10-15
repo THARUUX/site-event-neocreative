@@ -14,6 +14,7 @@ import { cn } from "@/lib/utils";
 import DotPattern from "@/components/magicui/dot-pattern";
 import Hero from "@/components/Hero";
 import HeroTwo from "@/components/HeroTwo";
+import HeroThree from "@/components/HeroThree";
 
 export default function HomePage({ categories, categoryProducts, id }) {
   const [catoID, setCatoID] = useState(id);
@@ -38,12 +39,10 @@ export default function HomePage({ categories, categoryProducts, id }) {
       />
         <Header homeActive="open" />
         <Featured />
-        <Hero></Hero>
-        <HeroTwo />
         <Center>
           <div className="text-3xl">Categories</div>
           <div className="py-24">
-            <div className='w-full flex flex-wrap sm:gap-16 gap-10 sm:justify-normal justify-center category-list-container ease-in-out duration-300'>
+            <div className='w-full flex flex-wrap sm:gap-16 gap-10 justify-center category-list-container ease-in-out duration-300'>
               {categories?.length > 0 && categories.map(category => (
                 category?.parent?.name && category.parent._id === catoID ? (
                   <Link key={category._id} href={`/Category/${category._id}`} className='category-container' data-aos='fade'>
@@ -54,8 +53,8 @@ export default function HomePage({ categories, categoryProducts, id }) {
                         src={category.image} 
                         alt={category.name} 
                         className='w-64 h-64 object-cover rounded-t-md drop-shadow-xl bg-transparent'
-                      />
-                    )}
+                        />
+                      )}
                     <div className='w-64 px-5 py-3 text-center rounded shadow-md tracking-wider bg-white/40'>
                       {category.name}
                     </div>
@@ -70,6 +69,9 @@ export default function HomePage({ categories, categoryProducts, id }) {
             </div>
           </div>
         </Center>
+          <Hero></Hero>
+          <HeroTwo />
+          <HeroThree />
         <Footer />
       </div>
     </>

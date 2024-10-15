@@ -37,7 +37,7 @@ export default function Featured({ product }) {
             <div className="w-2/4 flex flex-col gap-3 pt-10 featured-div-2-1">
               <h1 className="text-3xl w-fit tracking-wide text-main-dark" data-aos="fade-left">
                 <LetterPullup
-                  className="text-3xl font-thin justify-start text-left tracking-wide text-main-dark"
+                  className="text-3xl font-normal justify-start text-left tracking-wide text-main-dark"
                   words={"Diary 2025"}
                   delay={0.05}
                 />
@@ -56,7 +56,7 @@ export default function Featured({ product }) {
                 Showcase your brand with custom Print, Foil, Deboss, or UV Print finishes for a lasting impression.
                 <br />
                 <br />
-                For inquiries and orders, contact us at 0768261165.
+                For any bulk order inquiries, please feel free to contact us at 0768261165
               </p>
               <div className="flex gap-3 featured-div-2-1-1">
                 <div className="">

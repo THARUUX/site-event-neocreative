@@ -18,7 +18,7 @@ export default function ProductBox({_id,title,description,price,images}) {
 
   const url = '/product/'+_id;
   return (
-    <>
+    <div className="relative bottom-0 hover:bottom-1 duration-300 ease-in-out">
       <div className="w-64 flex flex-col gap-2 product-box" data-aos='fade'>
         <Link href={url} onClick={() => (setLoading(true))} className="w-full h-auto ">
           <div className="w-full h-auto">
@@ -46,6 +46,6 @@ export default function ProductBox({_id,title,description,price,images}) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 } 

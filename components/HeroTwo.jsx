@@ -2,13 +2,14 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
-import imageTwo from '@/public/Images/imageTwo.png';
+import imageFour from '@/public/Images/image_4.jpg';
 import imageThree from '@/public/Images/image_3.jpg';
-import imageFour from '@/public/Images/image_2.jpg';
+import imageTwo from '@/public/Images/image_2.jpg';
 import { useGSAP } from '@gsap/react';
 import Center from './Center';
 import { cn } from "@/lib/utils";
 import DotPattern from "@/components/magicui/dot-pattern";
+import NumberTicker from './magicui/number-ticker';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,7 +66,7 @@ export default function Hero() {
           duration: 1,
           scrollTrigger: {
             trigger: img,
-            start: "top bottom-=100",
+            start: "top bottom-=0",
             end: "center center",
             scrub: true,
           }
@@ -81,7 +82,7 @@ export default function Hero() {
           duration: 1,
           scrollTrigger: {
             trigger: text,
-            start: "top bottom-=100",
+            start: "top bottom-=0",
             end: "center center",
             scrub: true,
           }
@@ -93,24 +94,24 @@ export default function Hero() {
 
   return (
     <Center>
-      <div ref={containerRef} className="relative  w-full h-[1257px] overflow-visible">
+      <div ref={containerRef} className="relative mt-24 top-16 w-full h-[1257px] overflow-visible">
       <DotPattern
         className={`${cn(
           "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]",
         )} relative h-full w-full`}
       />
         <div ref={scrollImagesRef} className="absolute w-full top-0 h-[100%] flex flex-col items-stretch justify-center gap-[10%] py-[0vh]">
-          <div className="z-10 flex justify-around gap-5 h-screen lg:h-auto items-center w-full">
-            <Image className="w-[40%] sm:w-[20%] rounded-lg shadow-xl" src={imageThree} alt="Scrolling image 1" width={500} height={500} />
-            <div ref={scrollTextRef} className="text-2xl sm:text-4xl text-main-dark">2 Colour special print</div>
+          <div className="z-10 flex-col sm:flex-row flex justify-around gap-5 h-screen lg:h-auto items-center w-full">
+            <Image className="w-[70%] sm:w-[25%] rounded-lg shadow-xl" src={imageThree} alt="Scrolling image 1" width={500} height={500} />
+            <div ref={scrollTextRef} className="text-2xl sm:text-5xl text-main-dark">2 Colour special print</div>
           </div>
-          <div className="z-10 flex justify-around gap-5 h-screen lg:h-auto items-center w-full">
-            <div ref={scrollTextRef} className="text-3xl sm:text-5xl w-1/3 text-main-dark text-start">80GSM Cream coloured premium paper</div>
-            <Image className="w-[40%] sm:w-[20%] rounded-lg shadow-xl" src={imageFour} alt="Scrolling image 2" width={500} height={500} />
+          <div className="z-10 flex-col sm:flex-row flex justify-around gap-5 h-screen lg:h-auto items-center w-full">
+            <div ref={scrollTextRef} className="text-3xl sm:text-5xl w-full sm:w-1/3 text-main-dark text-center">UV Print and other special effects</div>
+            <Image className="w-[70%] sm:w-[25%] rounded-lg shadow-xl" src={imageTwo} alt="Scrolling image 2" width={500} height={500} />
           </div>
-          <div className="z-10 flex justify-around gap-5 h-screen lg:h-auto items-center w-full">
-            <Image className="w-[40%] sm:w-[20%] rounded-lg shadow-xl" src={imageThree} alt="Scrolling image 3" width={500} height={500} />
-            <div ref={scrollTextRef} className="text-4xl sm:text-6xl w-1/3 text-main-dark">Rs.650 +</div>
+          <div className="z-10 flex-col sm:flex-row flex justify-around gap-5 h-screen lg:h-auto items-center w-full">
+            <Image className="w-[70%] sm:w-[25%] rounded-lg shadow-xl" src={imageFour} alt="Scrolling image 3" width={500} height={500} />
+            <div ref={scrollTextRef} className="text-4xl sm:text-5xl sm:w-1/3 text-main-dark text-center">Starting from Rs.<NumberTicker className={`text-main-dark mt-5`} value={650} />/-</div>
           </div>
         </div>
         {/*<div ref={scrollTextRef} className="absolute w-full top-0 h-[100%] flex flex-col items-end justify-around gap-[40%] py-[10%]">
