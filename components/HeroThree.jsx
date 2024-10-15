@@ -13,7 +13,7 @@ export default function HeroThree() {
 
   return (
     <Center>
-      <div className=" rounded-2xl shadow-xl w-full video-container">
+      <div className="sm:hidden lg:flex rounded-2xl shadow-xl w-full video-container">
         <div  className=" w-[7vw] sm:w-24 absolute translate-x-[200%] translate-y-[170%] sm:translate-y-[70%] h-[7vw] sm:h-24 bg-lime-500 rounded-full opacity-50"></div>
         <div  className="w-[11vw] sm:w-40 absolute translate-x-[500%] sm:translate-x-[600%] translate-y-[1250%] sm:translate-y-[150%]  h-[11vw] sm:h-40 bg-lime-500 rounded-full opacity-70"></div>
         <div className="w-[30vw] sm:w-64 absolute translate-x-[60%] sm:translate-x-[100%] translate-y-[780%] sm:translate-y-[180%] h-[30vw] sm:h-64 bg-lime-500 rounded-full opacity-50"></div>

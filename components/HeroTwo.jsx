@@ -93,14 +93,14 @@ export default function Hero() {
   }, []);
 
   return (
-    <Center>
-      <div ref={containerRef} className="relative mt-24 top-16 w-full h-[1257px] overflow-visible">
+    <Center className="">
+      <div ref={containerRef} className="sm:hidden lg:flex relative mt-24 top-16 w-full h-[1257px] overflow-visible">
       <DotPattern
         className={`${cn(
           "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]",
         )} relative h-full w-full`}
       />
-        <div ref={scrollImagesRef} className="absolute w-full top-0 h-[100%] flex flex-col items-stretch justify-center gap-[10%] py-[0vh]">
+        <div ref={scrollImagesRef} className="sm:hidden lg:flex absolute w-full top-0 h-[100%] flex flex-col items-stretch justify-center gap-[10%] py-[0vh]">
           <div className="z-10 flex-col sm:flex-row flex justify-around gap-5 h-screen lg:h-auto items-center w-full">
             <Image className="w-[70%] sm:w-[25%] rounded-lg shadow-xl" src={imageThree} alt="Scrolling image 1" width={500} height={500} />
             <div ref={scrollTextRef} className="text-2xl sm:text-5xl text-main-dark">2 Colour special print</div>

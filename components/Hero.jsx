@@ -66,7 +66,7 @@ export default function HeroTwo() {
   }, []);
 
   return (
-    <div className="scroll-container overflow-auto m-0 p-0 flex-col items-center flex justify-center max-w-screen-2xl w-screen max-h-[1536px]">
+    <div className="sm:hidden lg:flex scroll-container overflow-auto m-0 p-0 flex-col items-center flex justify-center max-w-screen-2xl w-screen max-h-[1536px]">
         <div className="m-0 p-0">
             <div className="scroll-text relative sm:top-24 text-3xl sm:text-5xl opacity-0 w-full text-start sm:px-24 font-bold tracking-wider" ref={textRef}>
                 Customizable Pages
