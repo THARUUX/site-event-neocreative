@@ -10,7 +10,6 @@ export default function Actions() {
       <Link
         title='cart'
         href={'/cart'}
-        onClick={() => setLoading('cart', true)}
         className='flex p-3 bg-main rounded-full shadow-xl scale-100 hover:scale-105 ease-out duration-300 gap-2 items-center text-white'
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" className="w-7 h-7">
@@ -20,13 +19,11 @@ export default function Actions() {
             clipRule="evenodd"
           />
         </svg>
-        ({cartProducts ? cartProducts.length : 0})
       </Link>
       <div className='flex gap-3'>
         <Link
           title='Home'
           href={'/'}
-          onClick={() => setLoading(true)}
           className='flex p-3 bg-main rounded-full shadow-xl scale-100 hover:scale-105 ease-out duration-300 gap-2 items-center text-white'
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffff" className="w-5 h-5">

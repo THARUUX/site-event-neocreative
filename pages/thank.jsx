@@ -19,10 +19,10 @@ export default function Thank() {
         <>
             <Header />
             <Center>
-                <div className='w-screen h-screen flex justify-center items-center'>
+                <div className='w-full h-screen flex justify-center items-center'>
                     <div className='flex justify-center flex-col'>
-                        <h1 className='text-3xl text-center'>Thanks for your order!</h1>
-                        <p>We will contact you when your order will be sent.</p>
+                        <h1 className='text-xl sm:text-3xl text-center'>Thanks for your order!</h1>
+                        <p className='text-sm sm:text-base text-center'>We will contact you when your order will be sent.</p>
                         <div className='text-center flex justify-center'>
                             <button onClick={handleBackClick} className='btn bg-lime-500 text-white py-1 mt-5 px-5 rounded shadow-md flex gap-2 items-center'>
                                 Back
